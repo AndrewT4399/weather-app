@@ -1,0 +1,81 @@
+/* select everything, then default the margin and padding to zero. Factored the padding and border into element sizes with box-sizing: border-box. */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Made the body as tall as the screen it's rendered in using 100vh. Set font-family with a default sans-serif font. Set background image to San Diego. */
+body {
+    background-image: url(https://imageio.forbes.com/specials-images/dam/imageserve/1120536785/960x0.jpg?height=532&width=711&fit=bounds);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+}
+
+/* Gave the main element a relative position, then placed it 30% from the top. <main> is a block element so we centered it with margin: auto */
+main {
+    background-color: rgba(227, 193, 173, 0.85);
+    position: relative;
+    top: 30%;
+    border: 1px solid;
+    border-radius: 5px;
+    min-width: 540px;
+    max-width: 50%;
+    margin: auto;
+    padding: 2em;
+}
+
+/* added space below the h1 element with margin-bottom */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* the #search element gets a 70% width, height of 42px, and no border */
+#search {
+    border-radius: 5px 0 0 5px;
+    border: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 70%;
+    height: 42px;
+}
+
+/* #submit gets a width of 5em and a cursor: pointer style (this turns the arrow into a pointing hand when hovering above the element. */ 
+#submit {
+    border-radius: 0 5px 5px 0;
+    padding: 10px;
+    font-size: 16px;
+    width: 5em;
+    cursor: pointer;
+}
+
+/* flex items are by default displayed in a row, but we changed it using flex-direction: column. We then used place-items: center to center align the items. */
+#weather-wrapper {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    justify-content: space-between;
+}
+
+#weather-search {
+    display: flex;
+    width: 50%;
+}
+
+#weather-data {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
+    padding: 1.5em;
+    margin-top: 20px;
+  
+    text-align: center;
+    align-items: center;
+    gap: 12px;
+}
+
+#weather-data > img {
+    border-radius: 50%;
+    background-color: lightskyblue;
+}
